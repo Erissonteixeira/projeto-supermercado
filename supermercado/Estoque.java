@@ -13,11 +13,11 @@ public class Estoque{
     }
 
     public void inicializaEstoque(){
-        produtos.add(new Produto(1, "Arroz 5kg", 22.50));
-        produtos.add(new Produto(2, "Feijão 1kg", 7.90));
-        produtos.add(new Produto(3, "Macarrão 500g", 5.60));
-        produtos.add(new Produto(4, "Açúcar 1kg", 4.30));
-        produtos.add(new Produto(5, "Café 500g", 12.80));
+        produtos.add(new Produto(1, "Arroz 5kg", 22.50, 10));
+        produtos.add(new Produto(2, "Feijão 1kg", 7.90, 15));
+        produtos.add(new Produto(3, "Macarrão 500g", 5.60, 20));
+        produtos.add(new Produto(4, "Açúcar 1kg", 4.30, 12));
+        produtos.add(new Produto(5, "Café 500g", 12.80, 8));
     }
 
     public Produto encontraProduto(String nome){
