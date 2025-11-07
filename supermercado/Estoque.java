@@ -32,10 +32,15 @@ public class Estoque{
     public void darBaixaEmEstoque(String nome, int quantidade){
         Produto produtoEncontrado = encontraProduto(nome);
         if(produtoEncontrado != null){
-            produtos.remove(produtoEncontrado);
-            System.out.println("Produto '" + nome + "' removido do estoque.");
+            int novaQtd = produtoEncontrado.getQuantidade() - quantidade;
+            if (novaQtd > 0){
+                produtoEncontrado.setQuantidade(novaQtd);
+            } else{
+                produtos.remove(produtoEncontrado);
+            }
+            System.out.println("Baixa registrada no estoque: " + nome);
         } else{
-            System.out.println("Produto '" + nome + "' não encontrado no estoque.");
+            System.out.println("Produto não encontrado no estoque.");
         }
     }
 
